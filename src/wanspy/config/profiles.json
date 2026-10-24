@@ -1,0 +1,34 @@
+{
+  "_comment": "Profile name -> ordered probe list. Add your own.",
+  "quick": [
+    "get_dns_resolve",
+    "get_rdns",
+    "get_ping",
+    "get_port_scan"
+  ],
+  "standard": [
+    "get_dns_resolve",
+    "get_rdns",
+    "get_ping",
+    "get_traceroute",
+    "get_port_scan",
+    "get_service_banners",
+    "get_tls_cert_info",
+    "get_http_info",
+    "get_rdap",
+    "get_geo_hint"
+  ],
+  "full": [
+    "get_dns_resolve",
+    "get_rdns",
+    "get_ping",
+    "get_traceroute",
+    "get_port_scan_full",
+    "get_service_banners",
+    "get_tls_cert_info",
+    "get_http_info",
+    "get_rdap",
+    "get_geo_hint",
+    "get_block_discovery"
+  ]
+}

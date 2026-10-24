@@ -1,0 +1,24 @@
+{
+  "_comment": "Regexes matched against a raw service banner (first bytes read after connect, or HTTP Server header). First match wins. Case-insensitive.",
+  "signatures": [
+    {"pattern": "^SSH-([\\d.]+)-OpenSSH[_ ]([\\w.]+)", "product": "OpenSSH", "version_group": 2},
+    {"pattern": "^SSH-([\\d.]+)-dropbear[_ ]?([\\w.]*)", "product": "Dropbear SSH", "version_group": 2},
+    {"pattern": "^220.*vsftpd ([\\w.]+)", "product": "vsftpd", "version_group": 1},
+    {"pattern": "^220.*ProFTPD ([\\w.]+)", "product": "ProFTPD", "version_group": 1},
+    {"pattern": "^220.*Pure-?FTPd", "product": "Pure-FTPd", "version_group": null},
+    {"pattern": "^220.*Microsoft FTP Service", "product": "Microsoft FTP Service", "version_group": null},
+    {"pattern": "^220[- ].*ESMTP (Postfix)", "product": "Postfix", "version_group": null},
+    {"pattern": "^220[- ].*ESMTP (Exim) ([\\d.]+)", "product": "Exim", "version_group": 2},
+    {"pattern": "^220[- ].*Microsoft ESMTP MAIL Service", "product": "Microsoft Exchange SMTP", "version_group": null},
+    {"pattern": "nginx/([\\d.]+)", "product": "nginx", "version_group": 1, "header": "Server"},
+    {"pattern": "Apache/([\\d.]+)", "product": "Apache httpd", "version_group": 1, "header": "Server"},
+    {"pattern": "Microsoft-IIS/([\\d.]+)", "product": "Microsoft IIS", "version_group": 1, "header": "Server"},
+    {"pattern": "cloudflare", "product": "Cloudflare (edge/proxy, not origin)", "version_group": null, "header": "Server"},
+    {"pattern": "lighttpd/([\\d.]+)", "product": "lighttpd", "version_group": 1, "header": "Server"},
+    {"pattern": "^\\x00\\x00\\x00.{0,8}mysql_native_password|^.{0,4}[\\x05\\x0a]([\\d.]+)-MariaDB", "product": "MySQL/MariaDB", "version_group": null},
+    {"pattern": "^-ERR|^\\+OK", "product": "Redis (RESP, unauthenticated reachable)", "version_group": null},
+    {"pattern": "^RFB (\\d{3}\\.\\d{3})", "product": "VNC / RFB", "version_group": 1},
+    {"pattern": "^\\* OK.*IMAP4", "product": "IMAP server", "version_group": null},
+    {"pattern": "^\\+OK.*POP3", "product": "POP3 server", "version_group": null}
+  ]
+}

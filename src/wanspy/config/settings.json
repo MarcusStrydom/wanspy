@@ -1,0 +1,30 @@
+{
+  "_comment": "Defaults for every option. Override via Config layers, env WANSPY_CONFIG_DIR, or --config.",
+  "timeout": 3,
+  "cache_ttl": 30,
+  "workers": 20,
+  "user_agent": "wanspy/0.1 (+https://github.com/MarcusStrydom/wanspy)",
+  "deep": true,
+
+  "ping_count": 3,
+  "traceroute_max_hops": 30,
+
+  "top_ports": [21, 22, 23, 25, 53, 80, 110, 111, 123, 135, 139, 143, 161, 389,
+                443, 445, 465, 587, 631, 993, 995, 1433, 1521, 1723, 2049, 2375,
+                3000, 3306, 3389, 5000, 5432, 5900, 5985, 6379, 7547, 8000, 8080,
+                8443, 8888, 9000, 9090, 9200, 11211, 27017],
+  "full_scan_max_ports": 1024,
+  "full_scan_hard_cap": 4096,
+
+  "block_scan_max_hosts": 256,
+  "block_discovery_ports": [80, 443, 22],
+
+  "rdap_ip_base": "https://rdap.org/ip/",
+  "rdap_timeout": 6,
+
+  "geo_lookup_url": "http://ip-api.com/json/{ip}?fields=status,message,country,regionName,city,isp,org,as,reverse,query",
+  "geo_lookup_enabled": true,
+
+  "severity_rank": {"critical": 4, "high": 3, "medium": 2, "low": 1, "info": 0},
+  "confidence_rank": {"high": 2, "medium": 1, "low": 0}
+}

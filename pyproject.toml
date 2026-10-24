@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wanspy"
+version = "0.1.0"
+description = "Passive recon/audit toolkit for a public host or CIDR block"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-only" }
+authors = [{ name = "wanspy contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+wanspy = "wanspy.wanspy:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+wanspy = ["config/*.json"]

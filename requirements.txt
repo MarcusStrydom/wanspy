@@ -1,0 +1,2 @@
+# wanspy uses only the Python standard library.
+# This file exists for parity with projects that expect one; nothing to install.

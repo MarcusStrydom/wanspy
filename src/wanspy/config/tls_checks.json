@@ -1,0 +1,7 @@
+{
+  "_comment": "Thresholds applied by get_tls_cert_info / derive_findings when inspecting a target's own certificate (not a client-side interception check).",
+  "expiry_warning_days": 30,
+  "weak_sig_algorithms": ["md5", "sha1"],
+  "min_rsa_key_bits": 2048,
+  "flag_self_signed": true
+}
